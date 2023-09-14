@@ -12,10 +12,10 @@
     "url": "git+https://github.com/YanaBytkova/goit-js-hw-11-new.git"
   },
   "keywords": [],
-  
   "license": "ISC",
-
   "dependencies": {
+    "basiclightbox": "^5.0.4",
+    "bootstrap": "^5.3.1",
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
