@@ -6,17 +6,17 @@
     <title>Page title</title>
     <!-- <link
       rel="stylesheet"
-      href="./node_modules/basiclightbox/dist/basicLightbox.min.css"
+      href="_../node_modules/simplelightbox/dist/simpleLightbox.min.css_"
     /> -->
     <!-- <link
       rel="stylesheet"
-      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
     /> -->
     <link rel="stylesheet" href="./css/style.css" />
-    <script type="module" src="./index.js"></script>
+    <!-- <script type="module" src="./index.js"></script> -->
   </head>
   <body>
-    <header class="header">
+    <div class="header">
       <form class="search-form" id="search-form">
         <input
           type="text"
@@ -24,12 +24,19 @@
           autocomplete="off"
           placeholder="Search images..."
         />
-        <button type="submit" class="button">Search</button>
+        <button type="submit" class="button">
+          <svg class="search" width="20" height="20" aria-label="search">
+            <use class="icon-search" href="./images/symbol-defs.svg#icon-search"></use>
+          </svg>
+          </button>
       </form>
-    </header>
+    </div>
     <div class="gallery">
     
     </div>
+    <!-- <div class="d-flex justify-content-center">
+      <div class="spinner-border loader" role="status"></div>
+    </div> -->
     <div class="button-container">
       <button class="js-load-more load-more-hidden">Load more</button>
    </div> 
