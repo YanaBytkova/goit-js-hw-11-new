@@ -41,7 +41,8 @@ export const makeRequest = async (data, page) => {
           galleryEl.innerHTML = '';
           loadMoreEl.classList.replace("load-more", "load-more-hidden");
           
-        errorMsg()
+          errorMsg()
+          return
       });
   };
 function errorMsg() {
