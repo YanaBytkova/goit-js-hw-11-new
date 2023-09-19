@@ -2,7 +2,7 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
-import { makeRequest } from "./js/utils";
+import { makeRequest } from "./js/utils.js";
 
 
 const userForm = document.querySelector('.search-form');
@@ -26,13 +26,11 @@ const getImages = async (data, page) => {
     const listImg = await makeRequest(data, page);
 
     if (listImg) {
-      console.log(listImg, listImg.totalHits);
+      console.log("listImg", listImg);
       
         if (listImg.totalHits === 0 ) {
           errorMsg();
-          
           return;
-  
         }
         renderImages(listImg.hits);
          return listImg.totalHits;
@@ -97,7 +95,6 @@ const searchInfoCallback = async (e) => {
       //   });
       // }
       loadMoreEl.addEventListener("click", loadMoreHandler);
-      // const totHits = await makeRequest(data, page);
   
   };
 
