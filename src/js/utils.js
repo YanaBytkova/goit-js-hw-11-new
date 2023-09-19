@@ -23,7 +23,7 @@ export const makeRequest = async (data, page) => {
   
    return axios.get(`${BASE_URL}?${searchParams.toString()}`)
       .then((res) => {
-        if (res.status === 200) {
+        if (res.status === 200 && res.data.total != 0) {
                   return res.data;
                 }
         
@@ -44,10 +44,10 @@ export const makeRequest = async (data, page) => {
           errorMsg()
           return
       })
-      .finally(function () {
-        console.log("finally");
-        return 
-  });
+  //     .finally(function () {
+  //       console.log("finally");
+  //       return 
+  // });
   };
 function errorMsg() {
   Notify.failure('Sorry, there are no images matching your search query. Please try again.', {

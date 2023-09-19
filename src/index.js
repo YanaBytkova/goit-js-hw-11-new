@@ -26,7 +26,7 @@ const getImages = async (data, page) => {
     const listImg = await makeRequest(data, page);
 
     if (listImg) {
-      console.log("listImg", listImg);
+      // console.log("listImg", listImg);
       
         if (listImg.totalHits === 0 ) {
           errorMsg();
@@ -53,7 +53,7 @@ function renderImages(images) {
     
     gallery.on('show.simplelightbox', function () {
       
-    console.log(gallery);
+    // console.log(gallery);
     });
    const { height: cardHeight } = document
    .querySelector(".gallery")
